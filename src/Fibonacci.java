@@ -26,13 +26,12 @@ public class Fibonacci {
                     ". SingleCore. \t\t\t\tZeit: "+timeEnd/1000+" Sekunden");
         }
 
-        public static int fibonacci_singleCore(int n)  {
-            if(n == 0)
-                return 0;
-            else if(n == 1)
-                return 1;
-            else
+        public static int fibonacci_singleCore(int n) {
+            if (n <= 1) {
+                return n;
+            } else {
                 return fibonacci_singleCore(n - 1) + fibonacci_singleCore(n - 2);
-        }
 
+            }
+        }
 }

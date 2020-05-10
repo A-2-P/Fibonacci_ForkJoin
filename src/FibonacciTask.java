@@ -9,10 +9,10 @@ class FibonacciTask extends RecursiveTask<Long> {
 
     public Long compute() {
 
-        if (n<=1) {
-        //if(n<=10){
-            //return do_fibonacci(n);
-            return n;
+        //if (n<=1) {
+        if(n<=10){
+            return do_fibonacci(n);
+            //return n;
         }
         ForkJoinTask<Long> subTask1 = new FibonacciTask(n-1).fork();
         ForkJoinTask<Long> subTask2 = new FibonacciTask(n-2).fork();
