@@ -10,7 +10,7 @@ public class Fibonacci {
             ForkJoinPool pool = new ForkJoinPool();
             //Startzeit speichern
             double timeStart = System.currentTimeMillis();
-            //invoken
+            //invoken --> compute()
             long erg = pool.invoke(fibonacci);
             //Endzeit speichern
             double timeEnd = System.currentTimeMillis()- timeStart;
